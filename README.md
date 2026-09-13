@@ -87,9 +87,31 @@ soft_photo/
 ├── SKILL.md                       # Skill workflow and constraints
 ├── README.md                      # Bilingual release notes and usage notice
 ├── LICENSE.md                     # Bilingual non-commercial license
+├── pay/                           # Optional voluntary-support QR codes
+│   ├── AliPay.jpg
+│   └── WeChatPay.jpg
 └── references/
     └── prompt-template.md         # Prompt template and optional modules
 ```
+
+---
+
+## ☕ 自愿支持 / Voluntary support
+
+如果这个 Skill 对你有帮助，欢迎通过下方二维码自愿支持创作与维护。支持完全自愿、没有最低金额，也不会影响 Skill 的获取、功能或后续使用。
+
+If this Skill is useful to you, you are welcome to support its creation and maintenance through the QR codes below. Support is entirely voluntary, with no minimum amount, and never affects access to, functionality of, or future use of the Skill.
+
+<p align="center">
+  <img src="./pay/AliPay.jpg" width="32%" alt="Voluntary support via Alipay">
+  <img src="./pay/WeChatPay.jpg" width="32%" alt="Voluntary support via WeChat Pay">
+</p>
+
+## 🤝 商业使用 / Commercial use
+
+如需商业使用、定制授权或合作，请通过 [1978255744@qq.com](mailto:1978255744@qq.com) 联系原始作者商议。未经事先书面授权，不得商业使用。
+
+For commercial use, custom licensing, or collaboration, contact the original author at [1978255744@qq.com](mailto:1978255744@qq.com) to discuss terms. Commercial use is not permitted without prior written authorization.
 
 ---
 
