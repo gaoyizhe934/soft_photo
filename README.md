@@ -2,9 +2,9 @@
 
 # ✨ Soft Photo
 
-**为日系动画电影感插画生成兼顾光线、空间与镜头语言的跨模型提示词。**
+**为日系动画电影感插画生成兼顾柔和光线、留白与镜头语言的跨模型提示词。**
 
-**Create cross-model prompts for anime-cinematic illustrations with luminous light, spatial depth, and deliberate camera language.**
+**Create cross-model prompts for anime-cinematic illustrations with soft light, breathing room, and deliberate camera language.**
 
 </div>
 
@@ -28,8 +28,8 @@
 
 `soft-photo` is a Codex Skill that turns a requested subject, setting, weather, action, and mood into adaptable prompts for anime-cinematic imagery.
 
-- ✅ 使用“基础提示词 + 按需光线／构图模块”，避免死记具体场景。  
-  Uses a base prompt plus optional lighting/composition modules instead of fixed scenes.
+- ✅ 使用“基础提示词 + 按需光线／构图模块”，以柔和打光、有限细节和画面协调性为优先，避免死记具体场景。
+  Uses a base prompt plus optional lighting/composition modules, prioritizing soft light, restrained detail, and visual cohesion instead of fixed scenes.
 - ✅ 提供可跨模型使用、可按任务删减的负面提示词。  
   Includes a cross-model negative prompt that can be shortened for the task.
 - ✅ 保留用户对人物、地点、构图和氛围的控制权。  
