@@ -34,6 +34,8 @@
   Includes a cross-model negative prompt that can be shortened for the task.
 - ✅ 保留用户对人物、地点、构图和氛围的控制权。  
   Keeps the user in control of subject, setting, framing, and mood.
+- ✅ 对简短画面概念，先提供可选叙事方向，再扩写为完整的图像创作简报，最后才生成提示词或图像。
+  For a brief visual idea, offers narrative directions first, expands the selected one into a complete creative brief, and only then produces a prompt or image.
 - ❌ 不保证生成器会精确复现任何参考图，也不用于模仿特定在世艺术家的风格。  
   Does not guarantee an exact reproduction of any reference image or imitate a specific living artist.
 
@@ -45,11 +47,11 @@
 
 1. 将整个 `soft-photo` 文件夹放入 Codex 的 skills 目录，例如 `~/.codex/skills/`。
 2. 在新对话中使用 `$soft-photo`，随后描述你希望生成的场景。
-3. 说明主体、场景、动作、天气、情绪以及偏好的构图或画幅；技能会返回可直接粘贴的正面提示词，并在适用时给出负面提示词。
+3. 说明主体、场景、动作、天气、情绪以及偏好的构图或画幅；若描述简短，技能会先给出方向供选择，再扩写并生成提示词或图像。
 
 1. Place the complete `soft-photo` folder in your Codex skills directory, for example `~/.codex/skills/`.
 2. Invoke `$soft-photo` in a new conversation and describe the image you want.
-3. Provide the subject, setting, action, weather, mood, and any preferred framing or aspect ratio. The skill returns a ready-to-paste positive prompt and, where supported, a negative prompt.
+3. Provide the subject, setting, action, weather, mood, and any preferred framing or aspect ratio. For a brief idea, the skill first offers directions to choose from, then expands it before producing a prompt or image.
 
 ### 直接使用提示词模板 / Use the prompt template directly
 
@@ -93,6 +95,7 @@ soft_photo/
 └── references/
     ├── prompt-template.md         # Prompt template and optional modules
     ├── modular-prompt-library.md  # Scene, composition, lighting, and narrative modules
+    ├── description-expansion.md   # Brief idea to detailed visual-brief workflow
     └── tonal-parameters.md        # High-contrast lighting prompts and settings
 ```
 

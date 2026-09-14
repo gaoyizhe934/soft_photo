@@ -1,6 +1,6 @@
 ---
 name: soft-photo
-description: Create Japanese-anime cinematic environmental illustrations with narrative settings, small-to-medium characters embedded in space, selective directional light, and balanced visual detail. Use when the user asks for the soft_photo look or an anime image with poetic environmental storytelling; not for photorealistic photography or exact artist imitation.
+description: Expand brief image ideas into narrative Japanese-anime cinematic scenes, then create environmental illustration prompts with embedded characters, directional light, and balanced visual detail. Use when the user asks for the soft_photo look or an anime image with poetic environmental storytelling; not for photorealistic photography or exact artist imitation.
 metadata:
   short-description: Generate environmental anime-cinematic image prompts
 ---
@@ -9,9 +9,20 @@ metadata:
 
 Turn the user's scene into a flexible, model-compatible image prompt that retains the **soft_photo** visual language: Japanese anime environmental illustration, a character embedded in narrative space, directional filmic light, credible material cues, graphic faces and hair, and a suspended emotional moment.
 
+## Brief-to-scene expansion
+
+When the user provides only a short visual idea rather than a precise prompt, do **not** generate an image or immediately turn it into a final prompt.
+
+1. First return **two to five concise directions** for the same idea. Make their differences meaningful: for example composition and character scale, time/light/palette, degree of industrial versus natural contrast, or the implied narrative moment. Preserve every fact in the user's brief; do not treat illustrative examples as defaults.
+2. After the user selects a direction—or asks you to choose one—read [references/description-expansion.md](references/description-expansion.md) and write one detailed Chinese scene expansion before generating. It should be a coherent visual paragraph at approximately the density of the user's examples, not a list of tags or a screenplay.
+3. The expansion should establish, where relevant: character design and restrained pose; a concrete environment with meaningful lived-in or structural detail; one visual anchor; lighting direction and the value relationship; palette and limited material cues; foreground/midground/background; lens, framing, and depth of field; and the quiet unresolved story implied by the image. Detail must support place, scale, action, or emotion—not fill every surface.
+4. Present the completed expansion to the user, then derive the positive prompt, negative prompt, and applicable parameters from it. If the user asked to create an image and an image-generation tool is available, use that derived prompt to generate only after the expansion has been shown. Otherwise, stop at the ready-to-use prompt.
+
+If the user provides a full, precise scene description, skip the direction-choice stage unless they explicitly ask for ideation or expansion.
+
 ## Prompt workflow
 
-1. Preserve the requested subject, setting, action, emotion, weather, and framing. Do not add a fixed city, school uniform, or character appearance unless the user asks for it.
+1. Preserve the requested subject, setting, action, emotion, weather, and framing. Do not add a fixed city, school uniform, character appearance, or narrative prop unless the user asks for it or selects it during the brief-to-scene expansion.
 2. Assemble the prompt in the order in [references/prompt-template.md](references/prompt-template.md): subject and design, action, setting, environmental detail, one narrative anchor, composition, lens, lighting, palette, materials, then atmosphere and story.
 3. Select only the modules that materially support the requested narrative. Use [references/modular-prompt-library.md](references/modular-prompt-library.md) for scene, lens, light, palette, and narrative options.
 4. Prefer concrete visual descriptions and a small number of visual priorities over a long string of quality tags. Use Chinese by default; retain a small number of widely understood English camera terms only where they add precision.
@@ -37,6 +48,6 @@ Turn the user's scene into a flexible, model-compatible image prompt that retain
 
 ## Output
 
-Return a ready-to-paste positive prompt and, if useful, a negative prompt. When the user asks for parameters, include the applicable starting values from the tonal-parameters reference. State the recommended aspect ratio only when it is implied by the request or would materially improve composition.
+For a precise request, return a ready-to-paste positive prompt and, if useful, a negative prompt. For a brief request, follow the brief-to-scene expansion before returning the prompt or generating. When the user asks for parameters, include the applicable starting values from the tonal-parameters reference. State the recommended aspect ratio only when it is implied by the request or would materially improve composition.
 
-For prompt assembly, read [references/prompt-template.md](references/prompt-template.md). For selectable scene and narrative modules, read [references/modular-prompt-library.md](references/modular-prompt-library.md). For tonal controls and diffusion settings, read [references/tonal-parameters.md](references/tonal-parameters.md).
+For prompt assembly, read [references/prompt-template.md](references/prompt-template.md). For selectable scene and narrative modules, read [references/modular-prompt-library.md](references/modular-prompt-library.md). For brief-to-scene expansion, read [references/description-expansion.md](references/description-expansion.md). For tonal controls and diffusion settings, read [references/tonal-parameters.md](references/tonal-parameters.md).
