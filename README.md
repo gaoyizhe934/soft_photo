@@ -2,9 +2,9 @@
 
 # ✨ Soft Photo
 
-**为日系动画电影感插画生成兼顾柔和光线、留白与镜头语言的跨模型提示词。**
+**为日系动画电影感环境叙事插画生成兼顾强方向光、深色结构、空间层次与镜头语言的跨模型提示词。**
 
-**Create cross-model prompts for anime-cinematic illustrations with soft light, breathing room, and deliberate camera language.**
+**Create cross-model prompts for anime-cinematic environmental storytelling with strong directional light, dark tonal anchors, spatial layers, and deliberate camera language.**
 
 </div>
 
@@ -28,8 +28,8 @@
 
 `soft-photo` is a Codex Skill that turns a requested subject, setting, weather, action, and mood into adaptable prompts for anime-cinematic imagery.
 
-- ✅ 使用“基础提示词 + 按需光线／构图模块”，以柔和打光、有限细节和画面协调性为优先，避免死记具体场景。
-  Uses a base prompt plus optional lighting/composition modules, prioritizing soft light, restrained detail, and visual cohesion instead of fixed scenes.
+- ✅ 使用“模块化叙事提示词”，让人物嵌入前景—主体—背景完整的环境；细节随场景和叙事需要调整，不用死记具体场景。
+  Uses modular narrative prompts that embed the character in a complete foreground–subject–background setting; detail adapts to the story instead of memorising fixed scenes.
 - ✅ 提供可跨模型使用、可按任务删减的负面提示词。  
   Includes a cross-model negative prompt that can be shortened for the task.
 - ✅ 保留用户对人物、地点、构图和氛围的控制权。  
@@ -64,7 +64,7 @@
 | 人物与叙事 / Subject & story | 人物外观、关系、动作与情绪完全由你的请求决定。 / Define appearance, relationships, action, and emotion in the request. |
 | 场景与天气 / Setting & weather | 可使用都市、室内、自然或幻想场景，并改变时段与天气。 / Use urban, indoor, natural, or imaginative settings and vary time or weather. |
 | 镜头与构图 / Camera & composition | 按叙事需要选择广角、低机位、俯视、轻微 Dutch angle 或静态中近景。 / Choose wide-angle, low/high angle, a subtle Dutch angle, or a calm closer framing as the scene needs. |
-| 光线与色彩 / Light & color | 调整逆光、漫射光、叶影、反射、高光及冷暖关系。 / Adjust backlight, diffuse light, dappled shadows, reflections, highlights, and color temperature. |
+| 光线与色彩 / Light & color | 调整强方向主光、明暗分界、深色有色暗部、反射、高光及冷暖关系。 / Adjust directional key light, light-shadow separation, deep chromatic shadows, reflections, highlights, and color temperature. |
 | 负面提示词 / Negative prompt | 仅在生成器支持时使用；删除与目标动态、虚化或文字需求冲突的词。 / Use only where supported; remove terms that conflict with intended motion, blur, or text. |
 
 ---
@@ -91,7 +91,9 @@ soft_photo/
 │   ├── AliPay.jpg
 │   └── WeChatPay.jpg
 └── references/
-    └── prompt-template.md         # Prompt template and optional modules
+    ├── prompt-template.md         # Prompt template and optional modules
+    ├── modular-prompt-library.md  # Scene, composition, lighting, and narrative modules
+    └── tonal-parameters.md        # High-contrast lighting prompts and settings
 ```
 
 ---
