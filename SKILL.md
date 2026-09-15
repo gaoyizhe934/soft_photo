@@ -24,13 +24,13 @@ If the user provides a full, precise scene description, skip the direction-choic
 
 For a direction-menu request, the only normal decision gate is the user's choice of direction. From that point, execute this sequence automatically and in order:
 
-1. detailed Chinese scene expansion;
+1. cinematic Chinese scene expansion, classified before writing: for a monumental scene, deliberately expand scale, spatial relationships, environmental forces, and the unresolved narrative into an approximately 700-Chinese-character brief; for an everyday scene, expand the ordinary setting into an approximately 500-Chinese-character brief using cinematic photographic narration—camera position, visible cause-and-effect, spatial blocking, light, and a suspended story beat—then proceed to the method card;
 2. method card;
 3. scene, composition/camera, background, character (if present), lighting, and calibration preset cards;
-4. complete positive prompt and focused negative prompt;
+4. synthesize one final generation prompt from the selected preset-card constraints together with the scene-expansion details; resolve conflicts in favor of the user’s brief and the expansion’s narrative, spatial, and lighting decisions, then include a focused negative prompt only when the chosen generator supports it;
 5. image generation;
 6. visual inspection against the selected cards and cinematic/narrative gates; and
-7. targeted regeneration only when an observed failure remains.
+7. one mandatory audit-and-repair pass, whether or not the first inspection finds a failure: identify the most consequential improvement in composition, depth, lighting, background detail, character acting, or integration; make one focused revision affecting at most one to three fields, regenerate, and recheck while preserving every passing earlier-stage constraint.
 
 Do not end a turn after steps 1–4, and do not ask whether to begin the next step. Keep the user informed with short non-blocking commentary while work runs. A direction selection grants permission for ordinary, reversible generation and in-scope iteration; it does not authorize unrelated file changes, publishing, or external actions. If a material creative ambiguity remains after the selection, choose the most evidence-based interpretation from the selected direction; ask only when that ambiguity would substantially change the requested result.
 
@@ -64,7 +64,7 @@ Do not mix all available methods. Keep the selected route proportionate: a preci
 
 After showing the expansion, select scene, camera, background, character, and lighting presets strictly from the expanded text. For each selected preset, compare the relevant dimensions with the stored urban-staircase example: retain only transferable execution qualities and explicitly discard unmatched appearance or setting traits. Merge the expansion, method card, selected preset cards, constraints, and focused negative prompt into one complete generation prompt.
 
-Generate from that complete prompt, then inspect the result against the selected cards and the required narrative/cinematic gates. Record only concrete failures: composition/camera, space/depth, lighting/shadow, background detail, character acting, or subject integration. If it already passes, deliver it. Otherwise automatically make one targeted revision that changes at most one to three fields from the failing category, preserves all earlier passing constraints, regenerate, and recheck. Follow the order composition → depth → lighting → background detail → character detail; never repair a late-stage defect by reopening a passing earlier stage. Do not pause between these phases for approval. Stop once the result passes the applicable checks, the tool cannot continue, or a remaining choice genuinely requires user direction.
+Generate from that complete prompt, then inspect the result against the selected cards and the required narrative/cinematic gates. Record only concrete failures or the most consequential remaining opportunity across composition/camera, space/depth, lighting/shadow, background detail, character acting, or subject integration. Always perform exactly one audit-and-repair revision, even when the first result passes: choose the highest-priority applicable category, change at most one to three fields, preserve all earlier passing constraints, regenerate, and recheck. Follow the order composition → depth → lighting → background detail → character detail; never repair a late-stage defect by reopening a passing earlier stage. Do not pause between these phases for approval. Stop once the audit-and-repair result passes the applicable checks, the tool cannot continue, or a remaining choice genuinely requires user direction.
 
 ## Parameter presets
 
